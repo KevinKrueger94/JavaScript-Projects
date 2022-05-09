@@ -22,3 +22,8 @@ if (halfPop) {
     console.log(`${country}'s Einwohnerzahl ist ${half} und somit unter dem Durchschnitt.`);
 }
 
+
+console.log("9" - "5"); // 4
+console.log("19" - "13" + "17"); // 6178
+console.log("19" - "13" + 17); // 23
+console.log(5 + 6 + "4" + 9 - 4 - 2); // 1143
