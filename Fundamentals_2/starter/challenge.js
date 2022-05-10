@@ -18,7 +18,7 @@ if (avgKoalas >= avgDolphins * 2) {
 }
 */
 
-/* Challenge 2 */
+/* Challenge 2 
 const calcTip = function(bill) {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
 }
@@ -29,3 +29,29 @@ const tips = [calcTip(125), calcTip(555), calcTip(44)];
 const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(bills, tips, total);
+*/
+
+/* Challenge 3 */
+const mark = {
+    fullName: `Mark Miller`,
+    weight: 78,
+    height: 1.69,
+    calcBMI: function() {
+        return this.weight / this.height ** 2;
+    }
+}
+
+const john =  {
+    fullName: `John Smith`,
+    weight: 92,
+    height: 1.92,
+    calcBMI: function() {
+        return this.weight / this.height ** 2;
+    }
+}
+
+if (mark.calcBMI() > john.calcBMI()) {
+    console.log (`${mark.fullName}'s BMI(${mark.calcBMI()} is higher than ${john.fullName}'s BMI(${john.calcBMI()})!`);
+} else {
+    console.log (`${john.fullName}'s BMI(${john.calcBMI()} is higher than ${mark.fullName}'s BMI(${mark.calcBMI()})!`);
+}

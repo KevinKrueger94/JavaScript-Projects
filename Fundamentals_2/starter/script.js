@@ -140,3 +140,80 @@
 // if (objects.includes(`Computer`)) {
 //     console.log(`You have the Computer`);
 // }
+
+// Introduction Objects
+// Let's use an array again with different kinds of informations
+// const kevinArray = [
+//     `Kevin`,
+//     `Krüger`,
+//     2022 - 1994,
+//     [`Steven`, `Marcel`, `Silke`, `Karsten`]
+// ];
+// This array contains information of a full name, age and family members
+// With Objects on the other hand, we can pass in like a description so we don't have to memorize it ouself.
+// const kevin  = {
+//     firstName: `Kevin`,
+//     lastName: `Krüger`,
+//     age: 2022 - 1994,
+//     familyMembers: [`Steven`, `Marcel`, `Silke`, `Karsten`]
+// }
+// This Objects has 4 Properties and the order doesn't matter to retrieve informations from a object.
+// console.log(kevinArray);
+// console.log(kevin);
+
+// Using the Dot Notation
+// console.log(kevin.lastName);
+// Using the Bracket Notation
+// console.log(kevin[`lastName`]);
+// Let's store a repeating Part in a Variable (Like firstName and lastName)
+// const nameKey = `Name`;
+// console.log(kevin[`first` + nameKey]);
+// console.log(kevin[`last` + nameKey]);
+
+// Let's make the need of the Bracket Notation even more clear
+// const interestedIn = prompt(`What do you want to know about Kevin? 
+// choose between firstName, lastName, age and family.`)
+// Let's log the result in the console
+// console.log(kevin[interestedIn]);
+
+// Let's do something if someone wants to know anything that isn't inside the object
+// if (kevin[interestedIn]) {
+//     console.log(kevin[interestedIn]);
+// } else {
+//     console.log(`Wrong request!`);
+// }
+
+// Now let's use the Dot and Bracket Notation to add new Things to our Object
+// kevin.location = `Germany`;
+// kevin[`gitHub`] = `KevinKrueger94`;
+// console.log(kevin);
+
+// Exercise
+// Kevin has 4 close family members, and his mothers name is called Silke.
+// console.log(`${kevin.firstName} has ${kevin.familyMembers.length} close family members, and his Mother is called ${kevin.familyMembers[2]}.`);
+
+const kevin = {
+    firstName: `Kevin`, // String Value
+    lastName: `Krüger`, // String Value
+    birthYear: 1994,    // Integer Value
+    mood: `disappointment`,
+    family: [`Marcel`, `Steven`, `Silke`, `Karsten`, `Max`], // Array Value 
+    hasDriverLicense: false, // Boolean Value
+
+    // Function Expression | Function Value
+    calcAge: function() {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()} years old ${this.mood}, and he has ${this.hasDriverLicense ? `a` : `no`} driver's license`;
+    }
+}
+
+console.log(kevin.calcAge()); // Dot Notation
+console.log(kevin[`calcAge`]()); // Bracket Notation
+
+// Exercise
+// Kevin is a 28 years old disappointment, and he doesn't have a driver license.
+console.log(kevin.getSummary());
