@@ -31,7 +31,7 @@ const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills, tips, total);
 */
 
-/* Challenge 3 */
+/* Challenge 3 
 const mark = {
     fullName: `Mark Miller`,
     weight: 78,
@@ -55,3 +55,4 @@ if (mark.calcBMI() > john.calcBMI()) {
 } else {
     console.log (`${john.fullName}'s BMI(${john.calcBMI()} is higher than ${mark.fullName}'s BMI(${mark.calcBMI()})!`);
 }
+*/

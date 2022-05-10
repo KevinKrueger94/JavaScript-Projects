@@ -217,3 +217,11 @@ console.log(kevin[`calcAge`]()); // Bracket Notation
 // Exercise
 // Kevin is a 28 years old disappointment, and he doesn't have a driver license.
 console.log(kevin.getSummary());
+
+// Now let's learn about loops
+// Loops help us to repeat tasks over and over again
+// Simple example is during a workout you lift things over and over again
+// Writing a for loop / For loop keeps running while condition is True
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weigths repetition ${rep}`);
+}
