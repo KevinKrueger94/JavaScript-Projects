@@ -235,7 +235,7 @@ const kevinsArray = [
     `Student`,
     true
 ];
-
+/*
 const types = [];
 for (let i = 0; i < kevinsArray.length; i++) {
     // Reading from kevinsArray
@@ -268,4 +268,48 @@ for (let i = 0; i < kevinsArray.length; i++) {
     if (typeof kevinsArray[i] === `number`) break;
     
         console.log(kevinsArray[i], typeof kevinsArray[i]);
+}
+
+// Looping Backwards and Loops in Loops
+for (let i = kevinsArray.length - 1; i >= 0; i--) {
+    console.log(i, kevinsArray[i]);
+}
+
+// Looping in a loop
+// Exercise => We are doing 3 different workout exercises and repeat each 5 times
+for (let exercise = 1; exercise <= 3; exercise++) {
+    console.log(`=== Starting Exercise ${exercise} ===`)
+
+    for (let rep = 1; rep <= 5; rep++) {
+        console.log(`Exercise: Lifting weights. Repetition ${rep} 🏋️‍♂️`);
     }
+}
+
+// While Loop
+// For Loop for comparison
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weigths repitition ${rep} 🏋️‍♂️`);
+}
+// The While loop will continue to run while the condition is true
+let rep = 1;
+while (rep <= 10) {
+    console.log(`While: Lifting weigths repitition ${rep} 🏋️‍♂️`);
+    rep++;
+}
+// While Loop is more versatile because it doesn't really need a counter. It runs while the condition is set to true
+
+// Let's do a dice roll that continues to roll it until the 6 is rolled
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+if (dice === 6) {
+    console.log(`You rolled a ${dice} and won!`)
+}
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) {
+        console.log(`You rolled a ${dice} and won!`)
+    }
+}
+*/

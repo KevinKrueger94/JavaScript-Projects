@@ -75,4 +75,3 @@ let tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20;
 console.log(`The bill was ${bill}€ and the tip was ${tip}€, and the total cost was ${bill + tip}€!`)
 // Test Values 275€ = 41.25€ Tip | 40€ Bill = 6€ Tip | 430€ Bill = 86€ Tip
 */
-

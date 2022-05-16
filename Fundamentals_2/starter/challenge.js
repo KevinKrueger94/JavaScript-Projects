@@ -55,4 +55,35 @@ if (mark.calcBMI() > john.calcBMI()) {
 } else {
     console.log (`${john.fullName}'s BMI(${john.calcBMI()} is higher than ${mark.fullName}'s BMI(${mark.calcBMI()})!`);
 }
+
+Challenge 4
+Let's improve the Tip Calculator 
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+const calcTip = function(bills) {
+    return bills >= 50 && bills <= 300 ? bills * 0.15 : bills * 0.20;
+}
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+}
+console.log(bills, tips, totals);
+
+// Bonus
+const calcAverage = function(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
+console.log(calcAverage(bills));
 */
