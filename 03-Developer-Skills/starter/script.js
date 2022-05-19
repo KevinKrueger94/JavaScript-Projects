@@ -21,6 +21,7 @@ const temperatures = [3, -2, -6, -1, `error`, 9, 13, 17, 15, 14, 9, 5];
 // - Find min value in temp array DONE
 // - Subtract min from max (amplitude) and return it DONE
 
+/* 
 const calcTempAmplitude = function (temps) {
   // The max will be the first element of the array = 3
   // Our Loops starts at 3 and we ask if 3 is greater than the next element.
@@ -66,3 +67,45 @@ const calcTempAmplitudeNew = function (t1, t2) {
 };
 const amplitudeNew = calcTempAmplitudeNew(temperatures, [9, 0, 5, 44]);
 console.log(amplitudeNew);
+
+
+
+// Let's fix a simple bug using the console
+// A) IDENTIFY
+const measureKelvin = function () {
+  const measurement = {
+    type: `temp`,
+    unit: `celsius`,
+    // B) FIND - Prompt Function returns a string
+    // C) FIX - Convert the string to a number
+    // value: Number(prompt('Degrees celsius:')),
+    value: 10,
+  };
+  console.table(measurement);
+  console.log(measurement.value); // Prompt value works fine
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+console.log(measureKelvin());
+
+
+// Let's fix a sinple bug using the debugger in Chrome
+const calcTempAmplitudeBug = function (t1, t2) {
+  const temps = t1.concat(t2);
+
+  let max = 0;
+  let min = 0;
+
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== 'number') continue;
+    // debugger;
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+const amplitudeBug = calcTempAmplitudeBug([15, 2, 6, 32], [9, 1, 5]);
+console.log(amplitudeBug);
+*/
